@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Comic+Neue");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap");
 
 nav {
     position: fixed;
@@ -6,11 +6,10 @@ nav {
     top: 0;
     justify-content: space-evenly;
     width: 100%;
-    padding: 10px 0;
     background: white;
-    z-index: 99;
+    z-index: 2;
     letter-spacing: 2px;
-    font-family: 'Comic Neue';
+    font-family: "Open Sans", sans-serif;
     font-weight: bolder;
 }
 
@@ -50,6 +49,7 @@ nav .logo img {
     left: 0;
     width: 100vw;
     background: white;
+    padding: 0;
 }
 
 .nav-mobile a img {
@@ -59,14 +59,14 @@ nav .logo img {
 
 .nav-mobile-button {
     position: absolute;
-    right: 0rem;
-    top: 0.5rem;
+    right: 0.5rem;
+    top: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 4rem;
-    height: 4rem;
+    height: 3.5rem;
     background: transparent;
     border: 0;
 }
@@ -78,8 +78,8 @@ nav .logo img {
 .nav-mobile-button div {
     position: absolute;
     background: black;
-    width: 2.5rem;
-    height: 5px;
+    width: 2rem;
+    height: 4px;
     transform: translateY(-50%);
 }
 
