@@ -1,0 +1,130 @@
+/* Titles: Bebas Neue */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+/* Subtitles: Montserrat */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+/* Bold Content: Montserrat Medium */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+/* Content: Montserrat Light */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap");
+
+/* Global styles: start */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 125px;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: "Bebas Neue", cursive;
+    font-size: 4rem;
+    letter-spacing: 5px;
+    text-align: center;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    color: white;
+    padding: 1rem;
+    margin-top: -3rem;
+}
+
+h2 {
+    text-transform: capitalize;
+    text-align: center;
+    font-family: "Bebas Neue", cursive;
+    letter-spacing: 5px;
+    font-size: 2.2rem;
+    margin: 1rem 0 0;
+}
+
+section { 
+    margin-bottom: 2rem;
+}
+
+article {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+/* Global styles: end */
+
+/* Section hero: start */
+.hero {
+    margin-top: 89px;
+    height: calc(100vh - 7rem);
+    background-image: url(../images/deck1.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero a {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 3px solid white;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+/* Section hero: end */
+
+/* Article about-us: start */
+.about-us {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(169, 169, 169, 0.6);
+    padding: 1rem 0;
+}
+
+.about-us p {
+    width: 80%;
+    text-align: center;
+    font-size: 1.1rem;
+}
+/* Article about-us: end */
+
+/* Section why-choose-us: start */
+.why-choose-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.why-choose-us h3 {
+    text-transform: capitalize;
+    text-align: center;
+    margin: 5px 0 0;
+}
+
+.why-choose-us div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    width: 65%;
+}
+
+.why-choose-us div img {
+    width: 3rem;
+}
+
+.why-choose-us div p {
+    text-align: center;
+}
+/* Section why-choose-us: end */
