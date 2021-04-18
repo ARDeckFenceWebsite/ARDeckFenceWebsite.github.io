@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 nav {
     position: fixed;
@@ -9,7 +9,7 @@ nav {
     background: white;
     z-index: 2;
     letter-spacing: 2px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: bolder;
 }
 
@@ -19,7 +19,9 @@ nav a:hover {
 
 nav .logo img {
     width: 8rem;
-    margin-left: 2rem;
+    position: absolute;
+    left: calc(50% - 4rem );
+    top: 5px;
 }
 
 .nav-desktop {
@@ -216,6 +218,12 @@ nav .logo img {
 @media only screen and (min-width: 900px) {
     .nav-mobile {
         display: none;
+    }
+
+    nav .logo img {
+        margin-left: 0rem;
+        position: relative;
+        left: unset;
     }
 
     .nav-desktop a {
