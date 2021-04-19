@@ -45,10 +45,6 @@ h2 {
     margin: 1rem 0 0;
 }
 
-section {
-    margin-bottom: 2rem;
-}
-
 a {
     text-decoration: none;
     color: black;
@@ -76,7 +72,7 @@ span {
     margin-top: 1.5rem;
 }
 
-iframe {
-    margin-top: 1rem;
+.contact-info__address {
+    padding: 2rem 0;
 }
 /* Section contact-info: end */
