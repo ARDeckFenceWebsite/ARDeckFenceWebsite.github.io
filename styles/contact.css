@@ -45,7 +45,7 @@ h2 {
     margin: 1rem 0 0;
 }
 
-a {
+main a {
     text-decoration: none;
     color: black;
     display: flex;

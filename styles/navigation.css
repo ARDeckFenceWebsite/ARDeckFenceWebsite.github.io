@@ -17,6 +17,12 @@ nav a:hover {
     opacity: 0.5;
 }
 
+nav .logo {
+    width: 100000%;
+    height: 89px;
+    background: white;
+}
+
 nav .logo img {
     width: 8rem;
     position: absolute;
@@ -52,6 +58,7 @@ nav .logo img {
     width: 100vw;
     background: white;
     padding: 0;
+
 }
 
 .nav-mobile a img {
@@ -132,7 +139,7 @@ nav .logo img {
     right: 0;
     width: max-content;
     height: 70vh;
-    background: rgba(255, 255, 255, 88%);
+    background: rgba(255, 255, 255);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -216,6 +223,11 @@ nav .logo img {
 
 /* Start: media query */
 @media only screen and (min-width: 900px) {
+    nav .logo {
+        width: unset;
+        background: unset;
+    }
+
     .nav-mobile {
         display: none;
     }
