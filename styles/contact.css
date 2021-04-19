@@ -47,6 +47,19 @@ h2 {
 section {
     margin-bottom: 2rem;
 }
+
+a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+span {
+    font-family: "Montserrat", sans-serif;
+    margin-top: 1rem;
+}
 /* Global style: end */
 
 /* Section contact-info: start */
@@ -59,13 +72,7 @@ section {
     margin-bottom: 1rem;
 }
 
-.card-content {
-    margin-top: 1rem;
-    font-family: "Montserrat", sans-serif;
-    text-align: center;
-}
-
-.card-content iframe {
+iframe {
     margin-top: 1rem;
 }
 /* Section contact-info: end */
