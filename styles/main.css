@@ -34,7 +34,6 @@ h1 {
 }
 
 h2 {
-    text-transform: capitalize;
     text-align: center;
     font-family: "Bebas Neue", cursive;
     letter-spacing: 5px;
@@ -42,7 +41,7 @@ h2 {
     margin: 1rem 0 0;
 }
 
-section { 
+section {
     margin-bottom: 2rem;
 }
 
