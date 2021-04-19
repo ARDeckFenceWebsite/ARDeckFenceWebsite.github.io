@@ -18,6 +18,7 @@ body {
 }
 
 * {
+    font-family: "Montserrat", sans-serif;
     box-sizing: border-box;
 }
 
@@ -57,7 +58,6 @@ a {
 }
 
 span {
-    font-family: "Montserrat", sans-serif;
     margin-top: 1rem;
 }
 /* Global style: end */
@@ -70,6 +70,10 @@ span {
     align-items: center;
     padding: 2rem;
     margin-bottom: 1rem;
+}
+
+.contact-info__hours table {
+    margin-top: 1.5rem;
 }
 
 iframe {
