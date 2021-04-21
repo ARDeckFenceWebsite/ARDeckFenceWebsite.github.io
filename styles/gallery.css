@@ -1,0 +1,233 @@
+/* Titles: Bebas Neue */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+/* Subtitles: Montserrat */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+/* Bold Content: Montserrat Medium */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+/* Content: Montserrat Light */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap");
+
+/* Global style: start */
+* {
+    scrollbar-color: transparent transparent; /* thumb and track color */
+    scrollbar-width: 0px;
+}
+
+*::-webkit-scrollbar {
+    width: 0;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+}
+
+* {
+    -ms-overflow-style: none;
+}
+
+html {
+    scroll-padding-top: 89px; /* height of sticky header */
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    margin-top: 89px;
+}
+
+h1 {
+    font-family: "Bebas Neue", cursive;
+    font-size: 2rem;
+    letter-spacing: 5px;
+    text-align: center;
+    color: black;
+    text-transform: lowercase;
+    padding-top: 1rem;
+}
+/* Global style: end */
+
+/* Section carousel: start */
+.carousel ol,
+.carousel li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel {
+    position: relative;
+    padding-top: 0;
+    perspective: 100px;
+    width: 100vw;
+    height: calc(100vw * 0.75);
+    margin-bottom: 7rem;
+}
+
+.carousel__viewport {
+    height: calc((100vw * 0.75) + 15px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel__slide {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    outline: none;
+}
+
+.carousel__slide__images {
+    width: 100vw;
+    height: calc(100vw * 0.75);
+}
+
+.carousel__slide:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -40%, 70px);
+    color: #fff;
+    font-size: 2em;
+}
+
+.carousel__snapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel__navigation {
+    position: absolute;
+    right: 0;
+    bottom: -65px;
+    left: 0;
+    text-align: center;
+}
+
+.carousel__navigation-list,
+.carousel__navigation-item,
+.carousel__navigation-button {
+    display: inline-block;
+}
+
+.thumbnails {
+    height: 50px;
+}
+
+.carousel__prev,
+.carousel__next {
+    position: absolute;
+    width: 5rem;
+    height: 15rem;
+    font-size: 0;
+    outline: 0;
+}
+
+.carousel::before,
+.carousel__prev {
+    left: 0rem;
+}
+
+.carousel::after,
+.carousel__next {
+    right: 0rem;
+}
+
+.carousel::before,
+.carousel::after {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    pointer-events: none;
+    position: absolute;
+    top: calc(50% - 1rem);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: rgba(128, 128, 128, 0.5);
+}
+
+/* left arrow button */
+.carousel::before {
+    content: "<";
+}
+
+/* right arrow button */
+.carousel::after {
+    content: ">";
+}
+/* Section carousel: end */
+
+/* Media query: start */
+@media only screen and (min-width: 800px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel {
+        max-width: 1000px;
+        height: 550px;
+        margin-bottom: 10rem;
+    }
+
+    .carousel__viewport {
+        height: 570px;
+    }
+
+    .carousel__slide__images {
+        width: 733px;
+        height: 550px;
+    }
+
+    .carousel__navigation {
+        margin-bottom: -2rem;
+    }
+
+    .carousel__navigation,
+    .carousel__navigation-list {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .carousel__navigation-list {
+        max-width: 850px;
+    }
+
+    .carousel__navigation {
+        position: absolute;
+        bottom: -100px;
+    }
+
+    .thumbnails {
+        height: 85px;
+    }
+}
+/* Media query: end */
