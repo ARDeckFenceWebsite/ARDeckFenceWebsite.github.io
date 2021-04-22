@@ -88,15 +88,8 @@ h1 {
     flex: 0 0 100%;
     width: 100%;
     outline: none;
-}
-
-.carousel__slide::before {
-    display: block;
-    content: "";
-    height: 300px;
-    margin: -300px;
-    -webkit-background-clip: content-box;
-    background-clip: content-box;
+    scroll-margin-top: 120px;
+    scroll-padding-top: 120px;
 }
 
 .carousel__slide__images {
