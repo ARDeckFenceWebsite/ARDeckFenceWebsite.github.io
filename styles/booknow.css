@@ -70,7 +70,8 @@ form {
     flex-direction: column;
 }
 
- label {
+ label,
+ .label-and-input span {
     font-size: 0.8rem;
 }
 
@@ -78,11 +79,13 @@ form {
     line-height: 2rem;
 }
 
-.checkboxes {
+.checkboxes,
+.radios {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
     align-items: center;
+    margin-top: 2px;
 }
 
 textarea {
@@ -99,7 +102,7 @@ textarea {
 
 #submit {
     padding: 1rem;
-    font-size: 1rem;
-    border: none;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
 }
 /* Form: end */
