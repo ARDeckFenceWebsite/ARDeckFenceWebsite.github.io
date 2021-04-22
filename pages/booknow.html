@@ -86,13 +86,13 @@
                 <input type="text" name="phone" required>
             </div>
             <div class="label-and-input">
-                <span>Preferred time for consultation:</span>
+                <span>Preferred time for consultation*</span>
                 <div class="radios">
-                    <label for="appointment-time">9am - 12noon</label>
-                    <input type="radio" name="$appointment-time" value="9am - 12noon">
+                    <label for="appointment-time">9am - 12 noon</label>
+                    <input type="radio" name="$appointment-time" value="9am - 12noon" required>
                 </div>
                 <div class="radios">
-                    <label for="appointment-time">12noon - 5pm</label>
+                    <label for="appointment-time">12 noon - 5pm</label>
                     <input type="radio" name="$appointment-time" value="12noon - 5pm">
                 </div>
                 <div class="radios">
@@ -101,10 +101,10 @@
                 </div>
             </div>
             <div class="label-and-input">
-                <span>Which service(s) are you interested in?</span>
+                <span>Which service(s) are you interested in?*</span>
                 <div class="radios">
                     <label for="deck">Deck</label>
-                    <input type="radio" name="$service-needed" value="deck">
+                    <input type="radio" name="$service-needed" value="deck" required>
                 </div>
                 <div class="radios">
                     <label for="fence">Fence</label>
@@ -115,7 +115,7 @@
                     <input type="radio" name="$service-needed" value="both">
                 </div>
             </div>
-            <div class="label-and-input">
+            <div class="label-and-input" id="message">
                 <label for="message">Comments (optional)</label>
                 <textarea name="message"></textarea>
             </div>

@@ -47,10 +47,6 @@ h2 {
     font-size: 2.2rem;
     margin: 1rem 0 0;
 }
-
-section {
-    margin-bottom: 2rem;
-}
 /* Global style: end */
 
 /* Form: start */
@@ -75,6 +71,10 @@ form {
     font-size: 0.8rem;
 }
 
+.label-and-input span {
+    margin-top: 10px;
+}
+
 .label-and-input input {
     line-height: 2rem;
 }
@@ -86,6 +86,10 @@ form {
     justify-content: flex-end;
     align-items: center;
     margin-top: 2px;
+}
+
+#message {
+    margin-top: 5px;
 }
 
 textarea {
