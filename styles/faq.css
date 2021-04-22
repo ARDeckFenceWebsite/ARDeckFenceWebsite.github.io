@@ -82,3 +82,16 @@ section {
     font-family: "Montserrat", sans-serif;
 }
 /* Section faqs: end */
+
+
+#question {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+#call {
+    width: 80%;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+}
