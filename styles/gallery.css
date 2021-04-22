@@ -90,6 +90,15 @@ h1 {
     outline: none;
 }
 
+.carousel__slide::before {
+    display: block;
+    content: "";
+    height: 300px;
+    margin: -300px;
+    -webkit-background-clip: content-box;
+    background-clip: content-box;
+}
+
 .carousel__slide__images {
     width: 100vw;
     height: calc(100vw * 0.75);
