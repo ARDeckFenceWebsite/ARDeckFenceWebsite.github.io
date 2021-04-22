@@ -26,12 +26,84 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="628">
     <link rel="icon" href="./images/icon.jpeg">
-    <link rel="stylesheet" href="../styles/gallery.css">
+    <link rel="stylesheet" href="../styles/booknow.css">
     <link rel="stylesheet" href="../styles/navigation.css">
     <link rel="stylesheet" href="../styles/footer.css">
     <script src="../scripts/main.js" defer></script>
 </head>
 <body>
-    
+    <nav>
+        <div class="logo">
+            <img src="../images/logo.jpeg">
+        </div>
+        <!-- only one of "nav-desktop" and "nav-mobile" will show on user interface -->
+        <div class="nav-desktop">
+            <a href="../index.html">home</a>
+            <a href="#" class="active">book now</a>
+            <a href="../pages/faq.html">FAQs</a>
+            <a href="../pages/gallery.html">gallery</a>
+            <a href="../pages/contact.html">contact us</a>
+        </div>
+        <div class="nav-mobile" id="nav-mobile" onclick="toggleButtonAndMenu()">
+            <!-- The empty divs inside nav-menu-button are used for creating animation effects. -->
+            <button class="nav-mobile-button">
+                <div id="nav-mobile-button-div1"></div>
+                <div id="nav-mobile-button-div2"></div>
+                <div id="nav-mobile-button-div3"></div>
+                <div id="nav-mobile-button-div4"></div>
+            </button>
+            <ul class="nav-mobile-list nav-mobile-list-hidden" id="nav-mobile-list">
+                <li><a href="../index.html">home</a></li>
+                <li><a href="#" class="active">book now</a></li>
+                <li><a href="../pages/faq.html#">FAQs</a></li>
+                <li><a href="../pages/gallery.html">gallery</a></li>
+                <li><a href="../pages/contact.html">contact us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>        
+        <h1>book a free consultation</h1>
+        <form action="https://api.staticforms.xyz/submit" method="post">
+            <input type="hidden" name="accessKey" value="cdb72186-be4a-4964-8cef-69c5f74f5ef5">
+            <input type="hidden" name="subject" value="New Appointment!">
+            <input type="text" name="name" placeholder="Fullname*" required>
+            <input type="text" name="email" placeholder="Email*" required>
+            <input type="text" name="phone" placeholder="Phone*" required>
+            <div>
+                <span>Which service(s) are you interested in?</span>
+                <div class="checkboxes">
+                    <input type="checkbox" name="$deck">
+                    <label for="deck">Deck</label>
+                </div>
+                <div class="checkboxes">
+                    <input type="checkbox" name="$fence">
+                    <label for="fence">Fence</label>
+                </div>
+            </div>
+            <div>
+                <label for="date">pick a date</label>
+                <input type="datetime-local" name="date" id="">
+            </div>
+            <textarea name="message" placeholder="leave us a message (optional)"></textarea>
+            <input type="hidden" name="redirectTo" value="https://google.ca">
+            <input type="submit" value="Submit" />
+        </form>
+
+    </main>
+
+    <footer>
+        <div id="footer-links">
+            <a href="#">book now</a>
+            <a href="../pages/faq.html">FAQs</a>
+            <a href="../pages/gallery.html">gallery</a>
+            <a href="../pages/contact.html">contact us</a>
+        </div>
+        <div id="copyright">
+            <span>Copyright ⓒ 2021, </span><a href="../index.html">A&R Deck Fence Construction</a><span>. Site designed
+                and
+                developed by Ivan Wang.</span>
+        </div>
+    </footer>
 </body>
 </html>
