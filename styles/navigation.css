@@ -65,6 +65,23 @@ nav .logo img {
     margin-left: 1rem;
 }
 
+.nav-mobile-call {
+    position: absolute;
+    left: 1rem;
+    top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-mobile-call span {
+    font-size: 0.6rem;
+    margin-top: 5px;
+}
+
 .nav-mobile-button {
     position: absolute;
     right: 0.5rem;
