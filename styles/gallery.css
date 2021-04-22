@@ -31,7 +31,7 @@
 }
 
 html {
-    scroll-padding-top: 130px; /* height of sticky header */
+    scroll-padding-top: 280px; /* height of sticky header */
 }
 
 body {
@@ -231,8 +231,3 @@ h1 {
     }
 }
 /* Media query: end */
-
-main a:target {
-    margin-top: -90px;
-    padding-top: 180px;
-}
