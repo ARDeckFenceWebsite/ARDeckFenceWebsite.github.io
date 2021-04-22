@@ -11,6 +11,7 @@
 * {
     scrollbar-color: transparent transparent; /* thumb and track color */
     scrollbar-width: 0px;
+    box-sizing: border-box;
 }
 
 *::-webkit-scrollbar {
