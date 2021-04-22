@@ -26,7 +26,7 @@ nav .logo {
 nav .logo img {
     width: 8rem;
     position: absolute;
-    left: calc(50% - 4rem );
+    left: calc(50% - 4rem);
     top: 5px;
 }
 
@@ -58,7 +58,6 @@ nav .logo img {
     width: 100vw;
     background: white;
     padding: 0;
-
 }
 
 .nav-mobile a img {
@@ -160,7 +159,7 @@ nav .logo img {
     text-decoration: none;
     text-transform: uppercase;
     color: #585a5e;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
 }
 /* Start: animation */
 
