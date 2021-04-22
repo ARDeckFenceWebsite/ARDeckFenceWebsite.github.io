@@ -54,11 +54,6 @@ h1 {
 /* Global style: end */
 
 /* Section carousel: start */
-main a:target {
-    margin-top:-12px;
-    padding-top:60px;
-}
-
 .carousel ol,
 .carousel li {
     list-style: none;
@@ -236,3 +231,8 @@ main a:target {
     }
 }
 /* Media query: end */
+
+main a:target {
+    margin-top: -90px;
+    padding-top: 180px;
+}
