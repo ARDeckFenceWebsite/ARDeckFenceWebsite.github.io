@@ -32,7 +32,7 @@
 }
 
 html {
-    scroll-padding-top: 280px; /* height of sticky header */
+    scroll-padding-top: 680px;
 }
 
 body {
@@ -89,8 +89,8 @@ h1 {
     flex: 0 0 100%;
     width: 100%;
     outline: none;
-    scroll-margin-top: 120px;
-    scroll-padding-top: 120px;
+    padding-top: 90px;
+    margin-top: -90px;
 }
 
 .carousel__slide__images {
