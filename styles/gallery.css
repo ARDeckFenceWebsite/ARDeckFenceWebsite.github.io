@@ -6,12 +6,113 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 /* Content: Montserrat Light */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap");
+.images {
+    display: grid;
+    margin: 2rem 4px 2rem 4px;
+    justify-items: center;
+    align-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px 5px;
+    width: calc(100vw - 32px);
+}
 
-/* Global style: start */
+.image {
+    width: calc((100vw - 18px) / 3);
+    height: calc((100vw - 18px) / 3);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.image:nth-of-type(1) {
+    background-image: url(../images/work-deck1.jpeg);
+}
+
+.image:nth-of-type(2) {
+    background-image: url(../images/work-deck2.jpeg);
+}
+
+.image:nth-of-type(3) {
+    background-image: url(../images/work-deck3.jpeg);
+}
+
+.image:nth-of-type(4) {
+    background-image: url(../images/work-deck4.jpeg);
+}
+
+.image:nth-of-type(5) {
+    background-image: url(../images/work-deck5.jpeg);
+}
+
+.image:nth-of-type(6) {
+    background-image: url(../images/work-deck6.jpeg);
+}
+
+.image:nth-of-type(7) {
+    background-image: url(../images/work-deck7.jpeg);
+}
+
+.image:nth-of-type(8) {
+    background-image: url(../images/work-deck8.jpeg);
+}
+
+.image:nth-of-type(9) {
+    background-image: url(../images/work-deck9.jpeg);
+}
+
+.image:nth-of-type(10) {
+    background-image: url(../images/work-deck10.jpeg);
+}
+
+.image:nth-of-type(11) {
+    background-image: url(../images/work-deck11.jpeg);
+}
+
+#exit {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 100%;
+    background-color: rgba(43, 43, 43, 0.7);
+    z-index: 2;
+    position: absolute;
+    right: -0.6rem;
+    top: -1rem;
+}
+
+#exit:hover {
+    background-color: rgba(43, 43, 43);
+}
+
+#exit::before {
+    content: "";
+    width: 19px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+#exit::after {
+    content: "";
+    width: 19px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+#exit:hover:before,
+#exit:hover:after {
+    background: white;
+}
+
 * {
     scrollbar-color: transparent transparent; /* thumb and track color */
     scrollbar-width: 0px;
-    box-sizing: border-box;
 }
 
 *::-webkit-scrollbar {
@@ -31,71 +132,67 @@
     -ms-overflow-style: none;
 }
 
-html {
-    scroll-padding-top: 680px;
-}
-
-body {
-    margin: 0;
-}
-
-main {
-    margin-top: 89px;
-}
-
-h1 {
-    font-family: "Bebas Neue", cursive;
-    font-size: 2rem;
-    letter-spacing: 5px;
-    text-align: center;
-    color: black;
-    text-transform: lowercase;
-    padding-top: 1rem;
-}
-/* Global style: end */
-
-/* Section carousel: start */
-.carousel ol,
-.carousel li {
+ol,
+li {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
 .carousel {
-    position: relative;
-    padding-top: 0;
+    position: fixed;
+    top: calc(50% - 50vh + 20px);
+    left: 0;
+    right: 0;
+    margin: 0rem auto 30px;
+    filter: drop-shadow(0 0 10px #0003);
     perspective: 100px;
-    width: 100vw;
-    height: calc(100vw * 0.75);
-    margin-bottom: 7rem;
+    width: 90vw;
+    height: calc(100vh - 40px);
+    z-index: 100;
+}
+
+/* This property is also controlled by carousel-gallery.js */
+#carousel {
+    visibility: hidden;
 }
 
 .carousel__viewport {
-    height: calc((100vw * 0.75) + 15px);
+    height: calc(100vh - 30px);
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    padding: 0;
     display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
+}
+
+/* This is the bark background covering the whole screen except the nav bar. */
+.carousel__viewport::before {
+    content: "";
+    position: fixed;
+    top: -10rem;
+    left: -100%;
+    width: 200vw;
+    height: 200vh;
+    background-color: rgba(0, 0, 0, 0.65);
 }
 
 .carousel__slide {
     position: relative;
     flex: 0 0 100%;
     width: 100%;
-    outline: none;
-    padding-top: 90px;
-    margin-top: -90px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
-.carousel__slide__images {
-    width: 100vw;
-    height: calc(100vw * 0.75);
+.slide__image {
+    max-width: 100%;
+    max-height: calc(100vh - 30px);
+    outline: none;
 }
 
 .carousel__slide:before {
@@ -120,59 +217,26 @@ h1 {
 }
 
 .carousel__navigation {
-    position: absolute;
+    position: relative;
     right: 0;
-    bottom: -65px;
+    bottom: -1rem;
     left: 0;
     text-align: center;
 }
 
 .carousel__navigation-list,
-.carousel__navigation-item,
-.carousel__navigation-button {
+.carousel__navigation-item {
     display: inline-block;
 }
 
-.thumbnails {
-    height: 50px;
-}
-
+.carousel::before,
+.carousel::after,
 .carousel__prev,
 .carousel__next {
     position: absolute;
-    width: 5rem;
-    height: 15rem;
     font-size: 0;
     outline: 0;
-}
-
-.carousel::before,
-.carousel__prev {
-    left: 0rem;
-}
-
-.carousel::after,
-.carousel__next {
-    right: 0rem;
-}
-
-.carousel::before,
-.carousel::after {
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 1rem;
-    line-height: 1rem;
-    text-align: center;
-    pointer-events: none;
-    position: absolute;
-    top: calc(50% - 1rem);
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    background-color: rgba(128, 128, 128, 0.5);
+    transition: ease-in;
 }
 
 /* left arrow button */
@@ -184,53 +248,97 @@ h1 {
 .carousel::after {
     content: ">";
 }
-/* Section carousel: end */
 
-/* Media query: start */
-@media only screen and (min-width: 800px) {
-    main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+.carousel::before,
+.carousel::after {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 100%;
+    z-index: 1;
+    position: absolute;
+    top: calc(50% - 1.25rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    pointer-events: none;
+    background-color: rgba(43, 43, 43, 0.7);
+    opacity: 0;
+}
 
+.carousel__prev,
+.carousel__next {
+    width: 3rem;
+    height: 12rem;
+}
+
+.carousel__snapper,
+.carousel__slide {
+    outline-color: rgba(255, 255, 255, 0);
+}
+
+.carousel::before,
+.carousel__prev {
+    left: 0;
+}
+
+.carousel::after,
+.carousel__next {
+    right: 0;
+}
+
+.carousel:hover:before,
+.carousel:hover:after {
+    opacity: 1;
+    transition: ease 0.5s;
+}
+
+@media only screen and (min-height: 490px) {
     .carousel {
-        max-width: 1000px;
-        height: 550px;
-        margin-bottom: 10rem;
+        top: calc(50% - 14.5rem);
+        height: 29rem;
     }
 
     .carousel__viewport {
-        height: 570px;
+        height: 30rem;
     }
 
-    .carousel__slide__images {
-        width: 733px;
-        height: 550px;
-    }
-
-    .carousel__navigation {
-        margin-bottom: -2rem;
-    }
-
-    .carousel__navigation,
-    .carousel__navigation-list {
-        display: flex;
-        justify-content: space-evenly;
-        width: 100%;
-    }
-
-    .carousel__navigation-list {
-        max-width: 850px;
-    }
-
-    .carousel__navigation {
-        position: absolute;
-        bottom: -100px;
-    }
-
-    .thumbnails {
-        height: 85px;
+    .slide__image {
+        max-height: 29rem;
+        pointer-events: none;
     }
 }
-/* Media query: end */
+
+@media only screen and (min-height: 650px) {
+    .carousel {
+        top: calc(50% - 18.5rem);
+        height: 37rem;
+    }
+
+    .carousel__viewport {
+        height: 38rem;
+    }
+
+    .slide__image {
+        max-height: 37rem;
+    }
+}
+
+@media only screen and (min-height: 1000px) {
+    .carousel {
+        top: calc(50% - 25rem);
+        height: 50rem;
+    }
+
+    .carousel__viewport {
+        height: 51rem;
+    }
+
+    .slide__image {
+        max-height: 50rem;
+    }
+}
