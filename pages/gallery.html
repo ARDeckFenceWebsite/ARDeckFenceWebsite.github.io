@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="../styles/navigation.css">
     <link rel="stylesheet" href="../styles/footer.css">
     <script src="../scripts/main.js" defer></script>
+    <script src="../scripts/carousel-gallery.js" defer></script>
 </head>
 
 <body>
@@ -75,14 +76,28 @@
 
     <main>
         <h1>gallery</h1>
-
-        <section class="carousel" aria-label="Gallery">
+        <div class="images">
+            <a href="#carousel__slide1" class="image"></a>
+            <a href="#carousel__slide2" class="image"></a>
+            <a href="#carousel__slide3" class="image"></a>
+            <a href="#carousel__slide4" class="image"></a>
+            <a href="#carousel__slide5" class="image"></a>
+            <a href="#carousel__slide6" class="image"></a>
+            <a href="#carousel__slide7" class="image"></a>
+            <a href="#carousel__slide8" class="image"></a>
+            <a href="#carousel__slide9" class="image"></a>
+            <a href="#carousel__slide10" class="image"></a>
+            <a href="#carousel__slide11" class="image"></a>
+        </div>
+        <section class="carousel" id="carousel" aria-label="Gallery">
+            <!-- The button to close the image window. -->
+            <button id="exit"></button>
             <ol class="carousel__viewport">
                 <li id="carousel__slide1" tabindex="1" class="carousel__slide">
                     <div class="carousel__snapper">
-                        <a href="#carousel__slide5" class="carousel__prev">Go to last slide</a>
+                        <a href="#carousel__slide11" class="carousel__prev">Go to last slide</a>
                         <a href="#carousel__slide2" class="carousel__next">Go to next slide</a>
-                        <img class="carousel__slide__images" src="../images/work-deck1.jpeg"
+                        <img class="slide__image" src="../images/work-deck1.jpeg"
                             alt="a newly constructed wood deck in the backyard">
                     </div>
                 </li>
@@ -90,64 +105,142 @@
                     <div class="carousel__snapper">
                         <a href="#carousel__slide1" class="carousel__prev">Go to previous slide</a>
                         <a href="#carousel__slide3" class="carousel__next">Go to next slide</a>
-                        <img class="carousel__slide__images" src="../images/work-deck2.jpeg"
+                        <img class="slide__image" src="../images/work-deck2.jpeg"
                             alt="a newly constructed wood deck in the backyard">
                     </div>
                 </li>
                 <li id="carousel__slide3" tabindex="3" class="carousel__slide">
                     <div class="carousel__snapper">
                         <a href="#carousel__slide2" class="carousel__prev">Go to previous slide</a>
-                        <a href="#carousel__slide4" class="carousel__next">Go to first slide</a>
-                        <img class="carousel__slide__images" src="../images/work-deck3.jpeg"
+                        <a href="#carousel__slide4" class="carousel__next">Go to next slide</a>
+                        <img class="slide__image" src="../images/work-deck3.jpeg"
                             alt="a newly constructed wood deck in the backyard">
                     </div>
                 </li>
                 <li id="carousel__slide4" tabindex="4" class="carousel__slide">
                     <div class="carousel__snapper">
                         <a href="#carousel__slide3" class="carousel__prev">Go to previous slide</a>
-                        <a href="#carousel__slide5" class="carousel__next">Go to first slide</a>
-                        <img class="carousel__slide__images" src="../images/work-deck4.jpeg"
+                        <a href="#carousel__slide5" class="carousel__next">Go to next slide</a>
+                        <img class="slide__image" src="../images/work-deck4.jpeg"
                             alt="a newly constructed wood deck in the backyard">
                     </div>
                 </li>
                 <li id="carousel__slide5" tabindex="5" class="carousel__slide">
                     <div class="carousel__snapper">
                         <a href="#carousel__slide4" class="carousel__prev">Go to previous slide</a>
-                        <a href="#carousel__slide1" class="carousel__next">Go to first slide</a>
-                        <img class="carousel__slide__images" src="../images/work-deck5.jpeg"
+                        <a href="#carousel__slide6" class="carousel__next">Go to next slide</a>
+                        <img class="slide__image" src="../images/work-deck5.jpeg"
                             alt="a newly constructed wood deck in the backyard">
                     </div>
                 </li>
+                <li id="carousel__slide6" tabindex="6" class="carousel__slide">
+                    <div class="carousel__snapper">
+                        <a href="#carousel__slide5" class="carousel__prev">Go to previous slide</a>
+                        <a href="#carousel__slide7" class="carousel__next">Go to next slide</a>
+                        <img class="slide__image" src="../images/work-deck6.jpeg"
+                            alt="a newly constructed wood deck in the backyard">
+                    </div>
+                </li>
+                <li id="carousel__slide7" tabindex="7" class="carousel__slide">
+                    <div class="carousel__snapper">
+                        <a href="#carousel__slide6" class="carousel__prev">Go to previous slide</a>
+                        <a href="#carousel__slide8" class="carousel__next">Go to next slide</a>
+                        <img class="slide__image" src="../images/work-deck7.jpeg"
+                            alt="a newly constructed wood deck in the backyard">
+                    </div>
+                </li>
+                <li id="carousel__slide8" tabindex="8" class="carousel__slide">
+                    <div class="carousel__snapper">
+                        <a href="#carousel__slide7" class="carousel__prev">Go to previous slide</a>
+                        <a href="#carousel__slide9" class="carousel__next">Go to next slide</a>
+                        <img class="slide__image" src="../images/work-deck8.jpeg"
+                            alt="a newly constructed wood deck and iron fence in the backyard">
+                    </div>
+                </li>
+                <li id="carousel__slide9" tabindex="9" class="carousel__slide">
+                    <div class="carousel__snapper">
+                        <a href="#carousel__slide8" class="carousel__prev">Go to previous slide</a>
+                        <a href="#carousel__slide10" class="carousel__next">Go to next slide</a>
+                        <img class="slide__image" src="../images/work-deck9.jpeg"
+                            alt="a newly constructed wood deck and iron fence in the backyard">
+                    </div>
+                </li>
+                <li id="carousel__slide10" tabindex="10" class="carousel__slide">
+                    <div class="carousel__snapper">
+                        <a href="#carousel__slide9" class="carousel__prev">Go to previous slide</a>
+                        <a href="#carousel__slide11" class="carousel__next">Go to next slide</a>
+                        <img class="slide__image" src="../images/work-deck10.jpeg"
+                            alt="a newly constructed wood deck and iron fence in the backyard">
+                    </div>
+                </li>
+                <li id="carousel__slide11" tabindex="11" class="carousel__slide">
+                    <div class="carousel__snapper">
+                        <a href="#carousel__slide10" class="carousel__prev">Go to previous slide</a>
+                        <a href="#carousel__slide1" class="carousel__next">Go to first slide</a>
+                        <img class="slide__image" src="../images/work-deck11.jpeg"
+                            alt="a newly constructed wood fence in the backyard">
+                    </div>
+                </li>
             </ol>
-            <aside class="carousel__navigation">
+            <!-- <aside class="carousel__navigation">
                 <ol class="carousel__navigation-list">
                     <li class="carousel__navigation-item">
                         <a href="#carousel__slide1" class="carousel__navigation-button">
-                            <img class="thumbnails" src="../images/work-deck1.jpeg" alt="">
+                            <img class="thumbnails" src="../images/work-deck1.jpeg">
                         </a>
                     </li>
                     <li class="carousel__navigation-item">
                         <a href="#carousel__slide2" class="carousel__navigation-button">
-                            <img class="thumbnails" src="../images/work-deck2.jpeg" alt="">
+                            <img class="thumbnails" src="../images/work-deck2.jpeg">
                         </a>
                     </li>
                     <li class="carousel__navigation-item">
                         <a href="#carousel__slide3" class="carousel__navigation-button">
-                            <img class="thumbnails" src="../images/work-deck3.jpeg" alt="">
+                            <img class="thumbnails" src="../images/work-deck3.jpeg">
                         </a>
                     </li>
                     <li class="carousel__navigation-item">
                         <a href="#carousel__slide4" class="carousel__navigation-button">
-                            <img class="thumbnails" src="../images/work-deck4.jpeg" alt="">
+                            <img class="thumbnails" src="../images/work-deck4.jpeg">
                         </a>
                     </li>
                     <li class="carousel__navigation-item">
                         <a href="#carousel__slide5" class="carousel__navigation-button">
-                            <img class="thumbnails" src="../images/work-deck5.jpeg" alt="">
+                            <img class="thumbnails" src="../images/work-deck5.jpeg">
+                        </a>
+                    </li>
+                    <li class="carousel__navigation-item">
+                        <a href="#carousel__slide6" class="carousel__navigation-button">
+                            <img class="thumbnails" src="../images/work-deck6.jpeg">
+                        </a>
+                    </li>
+                    <li class="carousel__navigation-item">
+                        <a href="#carousel__slide7" class="carousel__navigation-button">
+                            <img class="thumbnails" src="../images/work-deck7.jpeg">
+                        </a>
+                    </li>
+                    <li class="carousel__navigation-item">
+                        <a href="#carousel__slide8" class="carousel__navigation-button">
+                            <img class="thumbnails" src="../images/work-deck8.jpeg">
+                        </a>
+                    </li>
+                    <li class="carousel__navigation-item">
+                        <a href="#carousel__slide9" class="carousel__navigation-button">
+                            <img class="thumbnails" src="../images/work-deck9.jpeg">
+                        </a>
+                    </li>
+                    <li class="carousel__navigation-item">
+                        <a href="#carousel__slide10" class="carousel__navigation-button">
+                            <img class="thumbnails" src="../images/work-deck10.jpeg">
+                        </a>
+                    </li>
+                    <li class="carousel__navigation-item">
+                        <a href="#carousel__slide11" class="carousel__navigation-button">
+                            <img class="thumbnails" src="../images/work-deck11.jpeg">
                         </a>
                     </li>
                 </ol>
-            </aside>
+            </aside> -->
         </section>
     </main>
 
