@@ -6,6 +6,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 /* Content: Montserrat Light */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap");
+
+body {
+    margin: 0;
+}
+
+.nav-mobile-list {
+    box-sizing: border-box;
+}
+
 .images {
     display: grid;
     margin: 2rem 4px 2rem 4px;
