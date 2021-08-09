@@ -114,6 +114,18 @@ body {
     background-image: url(../images/work-deck20.jpeg);
 }
 
+.image:nth-of-type(21) {
+    background-image: url(../images/work-deck21.jpeg);
+}
+
+.image:nth-of-type(22) {
+    background-image: url(../images/work-deck22.jpeg);
+}
+
+.image:nth-of-type(23) {
+    background-image: url(../images/work-deck23.jpeg);
+}
+
 #exit {
     width: 2.5rem;
     height: 2.5rem;
